@@ -1,7 +1,8 @@
 const express = require('express')
 const app = express()
 const multer = require('multer')
-// app.use('./upload', express.static('uploads'));
+
+app.use('/upload', express.static('./uploads'));
 
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
